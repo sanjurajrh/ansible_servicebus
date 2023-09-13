@@ -1,5 +1,9 @@
 ---
 ### When using the playbook, please ensure you change the keywork "gmail" as per your need. It is mandatory to do so or else it will give the error message that the name is not available
+### 1. auto_delete_on_idle_in_seconds is used to define the idle time interval after which a subscription is automatically deleted.
+### 2. default_message_time_to_live_seconds is used to define the duration after which the message expires, starting from when the message is sent to Service Bus.
+### 3. lock_duration_in_seconds is used to define the amount of time that the message is locked for other receivers
+### 4. max_delivery_count is used to define the value after which the message is automatically deadlettered.
 - hosts: localhost
   vars:
       resource_group: gmail-servicebustest

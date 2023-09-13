@@ -1,5 +1,6 @@
 ---
 ### When using the playbook, please ensure you change the keywork "gmail" as per your need. It is mandatory to do so or else it will give the error message that the name is not available
+### show_sas_policies is used to define the boolean value to show the SAS policies or not. 
 - hosts: localhost
   vars:
       resource_group: gmail-servicebustest

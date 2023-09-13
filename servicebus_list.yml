@@ -1,0 +1,27 @@
+---
+- hosts: localhost
+  vars:
+      resource_group: gmail-servicebustest
+      namespace: gmail-servicebustestns
+      topic: gmail-servicebustesttopic
+  tasks:
+    - name: Get a topic's information
+      azure.azcollection.azure_rm_servicebus_info:
+          type: topic
+          name: "{{ topic }}"
+          namespace: "{{ namespace }}"
+          resource_group: "{{ resource_group }}"
+          show_sas_policies: yes
+      register: topic_fact
+    - name: "List subscriptions under topic {{ topic }}"
+      azure.azcollection.azure_rm_servicebus_info:
+          type: subscription
+          topic: "{{ topic }}"
+          namespace: "{{ namespace }}"
+          resource_group: "{{ resource_group }}"
+      register: subs_fact
+    - debug:
+          var: "{{ item }}"
+      with_items:
+        - topic_fact.servicebuses[0]
+        - subs_fact.servicebuses

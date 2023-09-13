@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  vars:
+      resource_group: gmail-servicebustest
+      namespace: gmail-servicebustestns
+      topic: gmail-servicebustesttopic
+  tasks:
+    - name: Create a policy with send and listen privilege
+      azure_rm_servicebussaspolicy:
+          name: "{{ topic }}-{{ item }}"
+          topic: "{{ topic }}"
+          namespace: "{{ namespace }}"
+          resource_group: "{{ resource_group }}"
+          rights: "{{ item }}"
+      with_items:
+        - send
+        - listen
+      register: policy
+    - debug:
+          var: policy

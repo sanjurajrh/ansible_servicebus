@@ -1,0 +1,24 @@
+---
+- hosts: localhost
+  vars:
+      resource_group: gmail-servicebustest
+      location: eastus
+      namespacens: gmail-servicebustestns
+      queue: gmail-servicebustestqueue
+  tasks:
+    - name: Ensure resource group exist
+      azure_rm_resourcegroup:
+          name: "{{ resource_group }}"
+          location: "{{ location }}"
+    - name: Create a namespace
+      azure_rm_servicebus:
+          name: "{{ namespacens }}"
+          resource_group: "{{ resource_group }}"
+    - name: Create a queue
+      azure_rm_servicebusqueue:
+          name: "{{ queue }}"
+          namespace: "{{ namespacens }}"
+          resource_group: "{{ resource_group }}"
+      register: queue
+    - debug:
+          var: queue

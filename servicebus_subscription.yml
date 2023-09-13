@@ -1,0 +1,22 @@
+---
+- hosts: localhost
+  vars:
+      resource_group: gmail-servicebustest
+      location: eastus
+      namespace: gmail-servicebustestns
+      topic: gmail-servicebustesttopic
+      subscription: gmail-servicebustestsubs
+  tasks:
+    - name: Create a subscription
+      azure_rm_servicebustopicsubscription:
+          name: "{{ subscription }}"
+          topic: "{{ topic }}"
+          namespace: "{{ namespace }}"
+          resource_group: "{{ resource_group }}"
+          auto_delete_on_idle_in_seconds: null
+          default_message_time_to_live_seconds: 5184000
+          lock_duration_in_seconds: 300
+          max_delivery_count: 10
+      register: subs
+    - debug:
+          var: subs

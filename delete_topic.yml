@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  vars:
+    resource_group: gmail-servicebustest
+    namespace: gmail-servicebustestns
+    topic: gmail-servicebustesttopic
+  tasks:
+    - name: Delete topic
+      azure_rm_servicebustopic:
+        name: "{{ topic }}"
+        resource_group: "{{ resource_group }}"
+        namespace: "{{ namespace }}"
+        state: absent

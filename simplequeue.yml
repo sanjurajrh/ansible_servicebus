@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  vars:
+    resource_group: suneeshresgroup
+    location: eastus
+    namespace: suneeshnamespace
+    queue: suneesh-servicebustestqueue
+  tasks:
+    - name: Create a queue
+      azure_rm_servicebusqueue:
+          name: "{{ queue }}"
+          namespace: "{{ namespacens }}"
+          resource_group: "{{ resource_group }}"
+      register: queue
+    - debug:
+          var: queue

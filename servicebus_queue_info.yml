@@ -3,9 +3,9 @@
 ### show_sas_policies is used to define the boolean value to show the SAS policies or not. 
 - hosts: localhost
   vars:
-      resource_group: gmail-servicebustest
-      namespace: gmail-servicebustestns
-      queue: gmail-servicebustestqueue
+      resource_group: demo-gmail-servicebustest
+      namespace: demo-gmail-servicebustestns
+      queue: demo-gmail-servicebustestqueue
   tasks:
     - name: Get a queue's information
       azure.azcollection.azure_rm_servicebus_info:

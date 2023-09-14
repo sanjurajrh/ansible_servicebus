@@ -3,7 +3,7 @@
   vars:
     resource_group: suneeshresgroup
     location: eastus
-    namespace: suneeshnamespace
+    namespacens: suneeshnamespace
     queue: suneesh-servicebustestqueue
   tasks:
     - name: Create a queue

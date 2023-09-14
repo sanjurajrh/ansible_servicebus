@@ -12,7 +12,7 @@ Pre-requisites
 5. Collection: **azure.azcollection (1.17.0)**
 6. Environment used is a local system with ansible installed.
 7. The AAP is using the azure credential stored as Credentials in Ansible Controller.
-8. Please ensure that the application id and Secret is created prior for the user assigned with the Ansible Service Bus Data Owner, Azure Service Bus Data Sender and Azure Service Bus Data Receiver role. The App permissions can only be set with the admin privileges or else the custom roles should be additional added to the user.
+8. Please ensure that the application id and Secret is created prior for the user assigned with the Azure Service Bus Data Owner, Azure Service Bus Data Sender and Azure Service Bus Data Receiver role. The App permissions can only be set with the admin privileges or else the custom roles should be additional added to the user.
 
 
 Order of execution

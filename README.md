@@ -5,10 +5,10 @@ Topics support the publish-subscribe pattern to enable a one-to-many relationshi
 
 Pre-requisites
 =================
-# Azure subscription account. I have used the free account for this testing
-# Virtual machine/system with Ansible installed and configured to connect to Azure environment
-# We donot have any Ansible Service bus already created.
-# Assign the required roles of Ansible Service Bus Data Owner. Azure Service Bus Data Sender and Azure Servuce Bus Data Receiver, Azure Service Bus Namespace Manager.
+1. Azure Subscription account. I have used the free account for this testing
+2. Virtual machine/system with Ansible installed and configured to connect to Azure environment
+3. We donot have any Ansible Service bus already created. We are not using any existing applications to test
+4. Assign the required roles of Ansible Service Bus Data Owner. Azure Service Bus Data Sender and Azure Servuce Bus Data Receiver, Azure Service Bus Namespace Manager
 
 
 Order of execution

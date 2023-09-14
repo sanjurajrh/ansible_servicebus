@@ -2,10 +2,10 @@
 ### When using the playbook, please ensure you change the keywork "gmail" as per your need. It is mandatory to do so or else it will give the error message that the name is not available
 - hosts: localhost
   vars:
-      resource_group: demo-gmail-servicebustest
+      resource_group: demo1-gmail-servicebustest
       location: eastus
-      namespacens: demo-gmail-servicebustestns
-      queue: demo-gmail-servicebustestqueue
+      namespacens: demo1-gmail-servicebustestns
+      queue: demo1-gmail-servicebustestqueue
   tasks:
     - name: Ensure resource group exist
       azure_rm_resourcegroup:

@@ -6,11 +6,11 @@
 ### 4. max_delivery_count is used to define the value after which the message is automatically deadlettered.
 - hosts: localhost
   vars:
-      resource_group: gmail-servicebustest
+      resource_group: demo-gmail-servicebustest
       location: eastus
-      namespace: gmail-servicebustestns
-      topic: gmail-servicebustesttopic
-      subscription: gmail-servicebustestsubs
+      namespace: demo-gmail-servicebustestns
+      topic: demo-gmail-servicebustesttopic
+      subscription: demo-gmail-servicebustestsubs
   tasks:
     - name: Create a subscription
       azure_rm_servicebustopicsubscription:

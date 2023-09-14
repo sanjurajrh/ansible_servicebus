@@ -9,7 +9,7 @@ Pre-requisites
 2. Virtual machine/system with Ansible installed and configured to connect to Azure environment
 3. We donot have any Ansible Service bus already created. We are not using any existing applications to test
 4. Assign the required roles of Ansible Service Bus Data Owner, Azure Service Bus Data Sender and Azure Servuce Bus Data Receiver. To assign this to the user, the organization needs Azure AD Premium P1 or P2.
-5. Collection: azure.azcollection
+5. Collection: azure.azcollection (1.17.0)
 6. Environment used is a local system with ansible installed.
 7. The AAP is using the azure credential stored as Credentials in Ansible Controller.
 

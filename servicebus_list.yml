@@ -2,9 +2,9 @@
 ### When using the playbook, please ensure you change the keywork "gmail" as per your need. It is mandatory to do so or else it will give the error message that the name is not available.
 - hosts: localhost
   vars:
-      resource_group: gmail-servicebustest
-      namespace: gmail-servicebustestns
-      topic: gmail-servicebustesttopic
+      resource_group: demo-gmail-servicebustest
+      namespace: demo-gmail-servicebustestns
+      topic: demo-gmail-servicebustesttopic
   tasks:
     - name: Get a topic's information
       azure.azcollection.azure_rm_servicebus_info:

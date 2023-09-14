@@ -7,10 +7,10 @@
 ### 4. auto_delete_on_idle_in_seconds is used to define the idle time interval after which a topic is automatically deleted.
 - hosts: localhost
   vars:
-      resource_group: gmail-servicebustest
+      resource_group: demo-gmail-servicebustest
       location: eastus
-      namespace: gmail-servicebustestns
-      topic: gmail-servicebustesttopic
+      namespace: demo-gmail-servicebustestns
+      topic: demo-gmail-servicebustesttopic
   tasks:
     - name: Ensure resource group exist
       azure_rm_resourcegroup:

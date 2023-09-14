@@ -7,6 +7,9 @@ Pre-requisites
 =================
 # Azure subscription account. I have used the free account for this testing
 # Virtual machine/system with Ansible installed and configured to connect to Azure environment
+# We donot have any Ansible Service bus already created.
+# Assign the required roles of Ansible Service Bus Data Owner. Azure Service Bus Data Sender and Azure Servuce Bus Data Receiver, Azure Service Bus Namespace Manager.
+
 
 Order of execution
 ===================
